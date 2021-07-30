@@ -13,6 +13,8 @@ namespace IAS2163VP
 {
     public partial class New_Account_Form : Form
     {
+        private readonly SqlConnection conn = new SqlConnection(@"Data Source=MUKTADIR-PC\SQLEXPRESS;Initial Catalog=MMBdb;Integrated Security=True");
+
         public New_Account_Form()
         {
             InitializeComponent();
@@ -47,17 +49,18 @@ namespace IAS2163VP
                 key = Convert.ToInt32(dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString());
             }
         }
-        SqlConnection Con = new SqlConnection(@"Data Source=SAMIUL\SQLEXPRESS;Initial Catalog=MMBdb;Integrated Security=True");
+
+    
         private void DisplayAccounts()
         {
-            Con.Open();
+            conn.Open();
             string Query = "select * from AccountTbl";
-            SqlDataAdapter sda = new SqlDataAdapter(Query, Con);
+            SqlDataAdapter sda = new SqlDataAdapter(Query, conn);
             SqlCommandBuilder Builder = new SqlCommandBuilder(sda);
             var ds = new DataSet();
             sda.Fill(ds);
             dataGridView2.DataSource = ds.Tables[0];
-            Con.Close();
+            conn.Close();
         }
         private void Reset()
         {
@@ -76,19 +79,19 @@ namespace IAS2163VP
             {
                 try 
                 {
-                    Con.Open();
-                    SqlCommand cmd = new SqlCommand("insert into AccountTbl(AcName,AcPhone,AcAddress,AcGen,AcOccup,AcEduc,AcInc,AcBal) values(@AN,@AP,@AA,@AG,@AO,@AE,@AI,@AB)", Con);
-                    cmd.Parameters.AddWithValue("@AN", textBoxName.Text);
-                    cmd.Parameters.AddWithValue("@AP", textBoxPhone.Text);
-                    cmd.Parameters.AddWithValue("@AA", textBoxAddress.Text);
-                    cmd.Parameters.AddWithValue("@AG", comboBoxGender.SelectedItem.ToString());
-                    cmd.Parameters.AddWithValue("@AO", textBoxOcupation.Text);
-                    cmd.Parameters.AddWithValue("@AE", comboBoxEducation.Text);
-                    cmd.Parameters.AddWithValue("@AI", textBoxIncome.Text);
-                    cmd.Parameters.AddWithValue("@AB", 0);
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("insert into Account(Name,Phone,Address,Gender,Occupation,Income,AccountNo,Balance) values(@Name,@Phone,@Address,@Gender,@Occupation,@Income,@AccountNo,@Balance)", conn);
+                    cmd.Parameters.AddWithValue("@Name", textBoxName.Text);
+                    cmd.Parameters.AddWithValue("@Phone", textBoxPhone.Text);
+                    cmd.Parameters.AddWithValue("@Address", textBoxAddress.Text);
+                    cmd.Parameters.AddWithValue("@Gender", comboBoxGender.SelectedItem.ToString());
+                    cmd.Parameters.AddWithValue("@Occupation", textBoxOcupation.Text);
+                    cmd.Parameters.AddWithValue("@Income", comboBoxEducation.Text);
+                    cmd.Parameters.AddWithValue("@AccountNo", textBoxIncome.Text);
+                    cmd.Parameters.AddWithValue("@Balance", 0);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Account Created!");
-                    Con.Close();
+                    conn.Close();
                     Reset();
                     DisplayAccounts();
                 }
@@ -155,12 +158,12 @@ namespace IAS2163VP
             {
                 try
                 {
-                    Con.Open();
-                    SqlCommand cmd = new SqlCommand("delete from AccountTbl where AcNum=@AcKey", Con);
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("delete from AccountTbl where AcNum=@AcKey", conn);
                     cmd.Parameters.AddWithValue("@AcKey", key);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Account Deleted!");
-                    Con.Close();
+                    conn.Close();
                     Reset();
                     DisplayAccounts();
                 }
@@ -182,8 +185,8 @@ namespace IAS2163VP
             {
                 try
                 {
-                    Con.Open();
-                    SqlCommand cmd = new SqlCommand("update AccountTbl set AcName=@AN,AcPhone=@AP,AcAddress=@AA,AcGen=@AG,AcOccup=@AO,AcEduc=@AE,AcInc=@AI where AcNum=@AcKey", Con);
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("update AccountTbl set AcName=@AN,AcPhone=@AP,AcAddress=@AA,AcGen=@AG,AcOccup=@AO,AcEduc=@AE,AcInc=@AI where AcNum=@AcKey", conn);
                     cmd.Parameters.AddWithValue("@AN", textBoxName.Text);
                     cmd.Parameters.AddWithValue("@AP", textBoxPhone.Text);
                     cmd.Parameters.AddWithValue("@AA", textBoxAddress.Text);
@@ -194,7 +197,7 @@ namespace IAS2163VP
                     cmd.Parameters.AddWithValue("@AcKey", key);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Account Updated!");
-                    Con.Close();
+                    conn.Close();
                     Reset();
                     DisplayAccounts();
                 }
