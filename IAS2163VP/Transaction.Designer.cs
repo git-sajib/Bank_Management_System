@@ -61,6 +61,8 @@ namespace IAS2163VP
             this.CheckStaff = new System.Windows.Forms.Button();
             this.lblStaffId = new System.Windows.Forms.Label();
             this.TxtStaffId = new System.Windows.Forms.TextBox();
+            this.TanHistoryBtn = new System.Windows.Forms.Button();
+            this.TransactionHistoryBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -459,6 +461,42 @@ namespace IAS2163VP
             this.TxtStaffId.Size = new System.Drawing.Size(197, 26);
             this.TxtStaffId.TabIndex = 19;
             // 
+            // TanHistoryBtn
+            // 
+            this.TanHistoryBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.TanHistoryBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.TanHistoryBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.TanHistoryBtn.FlatAppearance.BorderSize = 5;
+            this.TanHistoryBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.TanHistoryBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Cyan;
+            this.TanHistoryBtn.Font = new System.Drawing.Font("Microsoft PhagsPa", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TanHistoryBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.TanHistoryBtn.Location = new System.Drawing.Point(612, 12);
+            this.TanHistoryBtn.Name = "TanHistoryBtn";
+            this.TanHistoryBtn.Size = new System.Drawing.Size(256, 31);
+            this.TanHistoryBtn.TabIndex = 31;
+            this.TanHistoryBtn.Text = "Check Account History";
+            this.TanHistoryBtn.UseVisualStyleBackColor = false;
+            this.TanHistoryBtn.Click += new System.EventHandler(this.TanHistoryBtn_Click);
+            // 
+            // TransactionHistoryBtn
+            // 
+            this.TransactionHistoryBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.TransactionHistoryBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.TransactionHistoryBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.TransactionHistoryBtn.FlatAppearance.BorderSize = 5;
+            this.TransactionHistoryBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.TransactionHistoryBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Cyan;
+            this.TransactionHistoryBtn.Font = new System.Drawing.Font("Microsoft PhagsPa", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TransactionHistoryBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.TransactionHistoryBtn.Location = new System.Drawing.Point(612, 49);
+            this.TransactionHistoryBtn.Name = "TransactionHistoryBtn";
+            this.TransactionHistoryBtn.Size = new System.Drawing.Size(256, 31);
+            this.TransactionHistoryBtn.TabIndex = 32;
+            this.TransactionHistoryBtn.Text = "Transaction History";
+            this.TransactionHistoryBtn.UseVisualStyleBackColor = false;
+            this.TransactionHistoryBtn.Click += new System.EventHandler(this.TransactionHistoryBtn_Click);
+            // 
             // Transaction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -466,6 +504,8 @@ namespace IAS2163VP
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(889, 546);
+            this.Controls.Add(this.TransactionHistoryBtn);
+            this.Controls.Add(this.TanHistoryBtn);
             this.Controls.Add(this.lblTitleTransaction);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -519,5 +559,7 @@ namespace IAS2163VP
         private System.Windows.Forms.Label lblStaffId;
         private System.Windows.Forms.TextBox TxtStaffId;
         private System.Windows.Forms.Label lblStaffRole;
+        private System.Windows.Forms.Button TanHistoryBtn;
+        private System.Windows.Forms.Button TransactionHistoryBtn;
     }
 }

@@ -284,5 +284,17 @@ namespace IAS2163VP
                 MessageBox.Show(E.Message);
             }
         }
+
+        private void TanHistoryBtn_Click(object sender, EventArgs e)
+        {
+            ViewAccountHistory viewAccount = new ViewAccountHistory();
+            viewAccount.Show();
+        }
+
+        private void TransactionHistoryBtn_Click(object sender, EventArgs e)
+        {
+            ViewTransactionHistroy viewTransactionHistroy = new ViewTransactionHistroy();
+            viewTransactionHistroy.Show();
+        }
     }
 }

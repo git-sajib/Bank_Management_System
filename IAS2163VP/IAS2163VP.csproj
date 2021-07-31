@@ -68,12 +68,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,9 +91,18 @@
     <Compile Include="Transaction.Designer.cs">
       <DependentUpon>Transaction.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="ViewAccountHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewAccountHistory.Designer.cs">
+      <DependentUpon>ViewAccountHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewTransactionHistroy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewTransactionHistroy.Designer.cs">
+      <DependentUpon>ViewTransactionHistroy.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,6 +120,12 @@
     </Compile>
     <EmbeddedResource Include="Transaction.resx">
       <DependentUpon>Transaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewAccountHistory.resx">
+      <DependentUpon>ViewAccountHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewTransactionHistroy.resx">
+      <DependentUpon>ViewTransactionHistroy.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
