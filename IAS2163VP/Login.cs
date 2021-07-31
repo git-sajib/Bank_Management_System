@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace IAS2163VP
 {
-    public partial class Login : Form
+    public partial class MainPage : Form
     {
-        public Login()
+        public MainPage()
         {
             InitializeComponent();
         }
@@ -65,6 +65,18 @@ namespace IAS2163VP
         private void lblTitleLogin_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void TransactionBtn_Click(object sender, EventArgs e)
+        {
+            Transaction transaction = new Transaction();
+            transaction.Show();
+         }
+
+    private void CreateNewAccountBtn_Click(object sender, EventArgs e)
+        {
+            New_Account_Form newAccountForm = new New_Account_Form();
+            newAccountForm.Show();
         }
     }
 }

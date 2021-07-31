@@ -54,9 +54,17 @@ namespace IAS2163VP
             this.lblDaccNo = new System.Windows.Forms.Label();
             this.textBoxDeAccNo = new System.Windows.Forms.TextBox();
             this.lblTitleTransaction = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblStaffRole = new System.Windows.Forms.Label();
+            this.lblStaffName = new System.Windows.Forms.Label();
+            this.CheckStaff = new System.Windows.Forms.Button();
+            this.lblStaffId = new System.Windows.Forms.Label();
+            this.TxtStaffId = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -67,7 +75,7 @@ namespace IAS2163VP
             this.panel1.Controls.Add(this.btnCheckBal);
             this.panel1.Controls.Add(this.labelCheckBalance);
             this.panel1.Controls.Add(this.textBoxCheckBalance);
-            this.panel1.Location = new System.Drawing.Point(102, 92);
+            this.panel1.Location = new System.Drawing.Point(113, 207);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(663, 100);
             this.panel1.TabIndex = 28;
@@ -161,7 +169,7 @@ namespace IAS2163VP
             this.panel2.Controls.Add(this.btnWithdraw);
             this.panel2.Controls.Add(this.lblWaccNo);
             this.panel2.Controls.Add(this.textBoxWiAccNo);
-            this.panel2.Location = new System.Drawing.Point(38, 213);
+            this.panel2.Location = new System.Drawing.Point(49, 328);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(406, 130);
             this.panel2.TabIndex = 29;
@@ -260,7 +268,7 @@ namespace IAS2163VP
             this.panel3.Controls.Add(this.btnDeposit);
             this.panel3.Controls.Add(this.lblDaccNo);
             this.panel3.Controls.Add(this.textBoxDeAccNo);
-            this.panel3.Location = new System.Drawing.Point(451, 213);
+            this.panel3.Location = new System.Drawing.Point(462, 328);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(406, 130);
             this.panel3.TabIndex = 30;
@@ -361,6 +369,96 @@ namespace IAS2163VP
             this.lblTitleTransaction.TabIndex = 28;
             this.lblTitleTransaction.Text = "Transactions";
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.lblStaffRole);
+            this.panel4.Controls.Add(this.lblStaffName);
+            this.panel4.Controls.Add(this.CheckStaff);
+            this.panel4.Controls.Add(this.lblStaffId);
+            this.panel4.Controls.Add(this.TxtStaffId);
+            this.panel4.Location = new System.Drawing.Point(113, 89);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(663, 100);
+            this.panel4.TabIndex = 28;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Teal;
+            this.label2.Location = new System.Drawing.Point(312, 3);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(51, 16);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "Check";
+            // 
+            // lblStaffRole
+            // 
+            this.lblStaffRole.AutoSize = true;
+            this.lblStaffRole.BackColor = System.Drawing.Color.Transparent;
+            this.lblStaffRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStaffRole.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblStaffRole.Location = new System.Drawing.Point(513, 52);
+            this.lblStaffRole.Name = "lblStaffRole";
+            this.lblStaffRole.Size = new System.Drawing.Size(46, 20);
+            this.lblStaffRole.TabIndex = 25;
+            this.lblStaffRole.Text = "Role";
+            this.lblStaffRole.Click += new System.EventHandler(this.lblStaffName_Click);
+            // 
+            // lblStaffName
+            // 
+            this.lblStaffName.AutoSize = true;
+            this.lblStaffName.BackColor = System.Drawing.Color.Transparent;
+            this.lblStaffName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStaffName.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblStaffName.Location = new System.Drawing.Point(510, 23);
+            this.lblStaffName.Name = "lblStaffName";
+            this.lblStaffName.Size = new System.Drawing.Size(55, 20);
+            this.lblStaffName.TabIndex = 25;
+            this.lblStaffName.Text = "Name";
+            this.lblStaffName.Click += new System.EventHandler(this.lblStaffName_Click);
+            // 
+            // CheckStaff
+            // 
+            this.CheckStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.CheckStaff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.CheckStaff.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.CheckStaff.FlatAppearance.BorderSize = 5;
+            this.CheckStaff.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.CheckStaff.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Cyan;
+            this.CheckStaff.Font = new System.Drawing.Font("Microsoft PhagsPa", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckStaff.ForeColor = System.Drawing.SystemColors.Control;
+            this.CheckStaff.Location = new System.Drawing.Point(268, 43);
+            this.CheckStaff.Name = "CheckStaff";
+            this.CheckStaff.Size = new System.Drawing.Size(96, 31);
+            this.CheckStaff.TabIndex = 24;
+            this.CheckStaff.Text = "Check";
+            this.CheckStaff.UseVisualStyleBackColor = false;
+            this.CheckStaff.Click += new System.EventHandler(this.CheckStaff_Click);
+            // 
+            // lblStaffId
+            // 
+            this.lblStaffId.AutoSize = true;
+            this.lblStaffId.BackColor = System.Drawing.Color.Transparent;
+            this.lblStaffId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStaffId.ForeColor = System.Drawing.Color.DarkOrange;
+            this.lblStaffId.Location = new System.Drawing.Point(40, 27);
+            this.lblStaffId.Name = "lblStaffId";
+            this.lblStaffId.Size = new System.Drawing.Size(58, 16);
+            this.lblStaffId.TabIndex = 14;
+            this.lblStaffId.Text = "Staff ID";
+            // 
+            // TxtStaffId
+            // 
+            this.TxtStaffId.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.TxtStaffId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtStaffId.Location = new System.Drawing.Point(43, 46);
+            this.TxtStaffId.Name = "TxtStaffId";
+            this.TxtStaffId.Size = new System.Drawing.Size(197, 26);
+            this.TxtStaffId.TabIndex = 19;
+            // 
             // Transaction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -371,6 +469,7 @@ namespace IAS2163VP
             this.Controls.Add(this.lblTitleTransaction);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Name = "Transaction";
             this.Text = "Transaction";
@@ -381,6 +480,8 @@ namespace IAS2163VP
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -411,5 +512,12 @@ namespace IAS2163VP
         private System.Windows.Forms.TextBox textBoxDeAccNo;
         private System.Windows.Forms.Label lblTitleTransaction;
         private System.Windows.Forms.Button btnResetBal;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblStaffName;
+        private System.Windows.Forms.Button CheckStaff;
+        private System.Windows.Forms.Label lblStaffId;
+        private System.Windows.Forms.TextBox TxtStaffId;
+        private System.Windows.Forms.Label lblStaffRole;
     }
 }

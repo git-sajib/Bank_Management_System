@@ -25,8 +25,7 @@ namespace IAS2163VP
             InitializeComponent();
             DisplayAccounts();
             RunningNumber = GetRunningAccountNo();
-            accountN = GetAccountNumber(RunningNumber);
-            Console.WriteLine(accountN);
+            
         }
 
         private void New_Account_Form_Load(object sender, EventArgs e)
@@ -42,7 +41,7 @@ namespace IAS2163VP
                 textBoxName.Text = dataRow.Cells[1].Value.ToString();
                 textBoxPhone.Text = dataRow.Cells[2].Value.ToString();
                 textBoxAddress.Text = dataRow.Cells[3].Value.ToString();
-                comboBoxGender.SelectedItem = dataRow.Cells[4].Value.ToString();
+                comboBoxAccType.SelectedItem = dataRow.Cells[4].Value.ToString();
                 textBoxIncome.Text = dataRow.Cells[5].Value.ToString();
             }
             
@@ -97,13 +96,13 @@ namespace IAS2163VP
             textBoxName.Text = "";
             textBoxPhone.Text = "";
             textBoxAddress.Text = "";
-            comboBoxGender.SelectedIndex = -1;
-            textBoxOcupation.Text = "";
+            comboBoxAccType.SelectedIndex = -1;
             textBoxIncome.Text = "";
-            comboBoxEducation.SelectedIndex = -1;
+            comboBoxBranch.SelectedIndex = -1;
         }
         private void btnSubmit_Click(object sender, EventArgs e)
         {
+            accountN = GetAccountNumber(RunningNumber);
 
             if (validate())
             {
@@ -117,7 +116,7 @@ namespace IAS2163VP
                     cmd.Parameters.AddWithValue("@Gender", comboBoxGender.SelectedItem.ToString());
                     cmd.Parameters.AddWithValue("@Income", textBoxIncome.Text);
                     cmd.Parameters.AddWithValue("@AccountNo", accountN);
-                    cmd.Parameters.AddWithValue("@Balance", 0);
+                    cmd.Parameters.AddWithValue("@Balance", Balance());
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Account Created!");
                     conn.Close();
@@ -129,6 +128,19 @@ namespace IAS2163VP
                     MessageBox.Show(E.Message);
                 }
             }
+        }
+
+        private int Balance() {
+            switch (GetAccountType()) {
+                case "01":
+                    return 50;
+                case "02":
+                    return 500;
+                case "03":
+                    return 1000;
+            }
+            return 0;
+        
         }
 
 
@@ -150,17 +162,13 @@ namespace IAS2163VP
                 showMessage("address can't be empty");
                 isValid = false;
             } 
-            if (comboBoxGender.SelectedIndex == -1)
+            if (comboBoxAccType.SelectedIndex == -1)
             {
                 showMessage("gender can't be empty");
                 isValid = false;
             }
-            if (textBoxOcupation.Text.Equals(""))
-            {
-                showMessage("ocupation can't be empty");
-                isValid = false;
-            }
-            if (comboBoxEducation.SelectedIndex == -1)
+            
+            if (comboBoxBranch.SelectedIndex == -1)
             {
                 showMessage("education can't be empty");
                 isValid = false;
@@ -206,21 +214,13 @@ namespace IAS2163VP
             
             }
 
-        private bool CreateNewAccount() {
-            bool isSuccessful = false;
-
-
-
-            return isSuccessful;
-        }
-
         private String GetAccountNumber(String runningNumber) {
             var accountNumber = new System.Text.StringBuilder();
-            String branchCode = "02";
-            String accountType = "001";
+            String branchCode = GetBranch();
+            String accountType = GetAccountType();
             runningNumber = UpdateRunningAcc(runningNumber);
-            accountNumber.Append(branchCode);
             accountNumber.Append(accountType);
+            accountNumber.Append(branchCode);
             accountNumber.Append(runningNumber);
             var result = FirstSetp(accountNumber.ToString());
             var x = MultiplyEachNumber(result);
@@ -235,6 +235,34 @@ namespace IAS2163VP
             Console.WriteLine("Account number : " + accountNumber.ToString());
 
             return accountNumber.ToString();
+        }
+
+        private String GetBranch()
+        {
+            try
+            {
+                String branch = comboBoxBranch.SelectedItem.ToString();
+                return branch.Split('.')[0];
+            }
+            catch {
+                MessageBox.Show("Missing Branch Info");
+                return "";
+            }
+            
+
+        }
+
+        private String GetAccountType() {
+            try
+            {
+                String accountType = comboBoxAccType.SelectedItem.ToString();
+                return accountType.Split('.')[0];
+            }
+            catch
+            {
+                MessageBox.Show("Missing Account Type Info");
+                return "";
+            }
         }
 
         private String UpdateRunningAcc(String runing) {
@@ -311,9 +339,8 @@ namespace IAS2163VP
                     cmd.Parameters.AddWithValue("@AN", textBoxName.Text);
                     cmd.Parameters.AddWithValue("@AP", textBoxPhone.Text);
                     cmd.Parameters.AddWithValue("@AA", textBoxAddress.Text);
-                    cmd.Parameters.AddWithValue("@AG", comboBoxGender.SelectedItem.ToString());
-                    cmd.Parameters.AddWithValue("@AO", textBoxOcupation.Text);
-                    cmd.Parameters.AddWithValue("@AE", comboBoxEducation.Text);
+                    cmd.Parameters.AddWithValue("@AG", comboBoxAccType.SelectedItem.ToString());
+                    cmd.Parameters.AddWithValue("@AE", comboBoxBranch.Text);
                     cmd.Parameters.AddWithValue("@AI", textBoxIncome.Text);
                     cmd.Parameters.AddWithValue("@AcKey", key);
                     cmd.ExecuteNonQuery();
@@ -327,6 +354,11 @@ namespace IAS2163VP
                     MessageBox.Show(E.Message);
                 }
             }
+        }
+
+        private void textBoxOcupation_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
     }
