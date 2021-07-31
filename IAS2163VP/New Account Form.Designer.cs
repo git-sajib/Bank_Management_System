@@ -32,23 +32,25 @@ namespace IAS2163VP
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(New_Account_Form));
             this.btnSubmit = new System.Windows.Forms.Button();
             this.textBoxName = new System.Windows.Forms.TextBox();
-            this.lblEducation = new System.Windows.Forms.Label();
+            this.lblBranch = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.lblPhone = new System.Windows.Forms.Label();
-            this.labelGender = new System.Windows.Forms.Label();
+            this.labelAccType = new System.Windows.Forms.Label();
             this.textBoxPhone = new System.Windows.Forms.TextBox();
             this.btnEdit = new System.Windows.Forms.Button();
             this.lblAddress = new System.Windows.Forms.Label();
             this.textBoxAddress = new System.Windows.Forms.TextBox();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.lblOcupation = new System.Windows.Forms.Label();
             this.lblIncome = new System.Windows.Forms.Label();
-            this.textBoxOcupation = new System.Windows.Forms.TextBox();
             this.textBoxIncome = new System.Windows.Forms.TextBox();
             this.comboBoxEducation = new System.Windows.Forms.ComboBox();
             this.comboBoxGender = new System.Windows.Forms.ComboBox();
             this.lblTitleNewAccForm = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,17 +81,17 @@ namespace IAS2163VP
             this.textBoxName.Size = new System.Drawing.Size(155, 26);
             this.textBoxName.TabIndex = 8;
             // 
-            // lblEducation
+            // lblBranch
             // 
-            this.lblEducation.AutoSize = true;
-            this.lblEducation.BackColor = System.Drawing.Color.Transparent;
-            this.lblEducation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEducation.ForeColor = System.Drawing.Color.DarkOrange;
-            this.lblEducation.Location = new System.Drawing.Point(48, 151);
-            this.lblEducation.Name = "lblEducation";
-            this.lblEducation.Size = new System.Drawing.Size(77, 16);
-            this.lblEducation.TabIndex = 5;
-            this.lblEducation.Text = "Education";
+            this.lblBranch.AutoSize = true;
+            this.lblBranch.BackColor = System.Drawing.Color.Transparent;
+            this.lblBranch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBranch.ForeColor = System.Drawing.Color.DarkOrange;
+            this.lblBranch.Location = new System.Drawing.Point(48, 151);
+            this.lblBranch.Name = "lblBranch";
+            this.lblBranch.Size = new System.Drawing.Size(56, 16);
+            this.lblBranch.TabIndex = 5;
+            this.lblBranch.Text = "Branch";
             // 
             // lblName
             // 
@@ -115,17 +117,17 @@ namespace IAS2163VP
             this.lblPhone.TabIndex = 6;
             this.lblPhone.Text = "Phone";
             // 
-            // labelGender
+            // labelAccType
             // 
-            this.labelGender.AutoSize = true;
-            this.labelGender.BackColor = System.Drawing.Color.Transparent;
-            this.labelGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGender.ForeColor = System.Drawing.Color.DarkOrange;
-            this.labelGender.Location = new System.Drawing.Point(232, 151);
-            this.labelGender.Name = "labelGender";
-            this.labelGender.Size = new System.Drawing.Size(59, 16);
-            this.labelGender.TabIndex = 5;
-            this.labelGender.Text = "Gender";
+            this.labelAccType.AutoSize = true;
+            this.labelAccType.BackColor = System.Drawing.Color.Transparent;
+            this.labelAccType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAccType.ForeColor = System.Drawing.Color.DarkOrange;
+            this.labelAccType.Location = new System.Drawing.Point(232, 151);
+            this.labelAccType.Name = "labelAccType";
+            this.labelAccType.Size = new System.Drawing.Size(103, 16);
+            this.labelAccType.TabIndex = 5;
+            this.labelAccType.Text = "Account Type";
             // 
             // textBoxPhone
             // 
@@ -194,18 +196,6 @@ namespace IAS2163VP
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // lblOcupation
-            // 
-            this.lblOcupation.AutoSize = true;
-            this.lblOcupation.BackColor = System.Drawing.Color.Transparent;
-            this.lblOcupation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOcupation.ForeColor = System.Drawing.Color.DarkOrange;
-            this.lblOcupation.Location = new System.Drawing.Point(597, 95);
-            this.lblOcupation.Name = "lblOcupation";
-            this.lblOcupation.Size = new System.Drawing.Size(78, 16);
-            this.lblOcupation.TabIndex = 6;
-            this.lblOcupation.Text = "Ocupation";
-            // 
             // lblIncome
             // 
             this.lblIncome.AutoSize = true;
@@ -217,15 +207,6 @@ namespace IAS2163VP
             this.lblIncome.Size = new System.Drawing.Size(58, 16);
             this.lblIncome.TabIndex = 5;
             this.lblIncome.Text = "Income";
-            // 
-            // textBoxOcupation
-            // 
-            this.textBoxOcupation.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBoxOcupation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxOcupation.Location = new System.Drawing.Point(600, 114);
-            this.textBoxOcupation.Name = "textBoxOcupation";
-            this.textBoxOcupation.Size = new System.Drawing.Size(155, 26);
-            this.textBoxOcupation.TabIndex = 8;
             // 
             // textBoxIncome
             // 
@@ -242,12 +223,10 @@ namespace IAS2163VP
             this.comboBoxEducation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxEducation.FormattingEnabled = true;
             this.comboBoxEducation.Items.AddRange(new object[] {
-            "Uneducated",
-            "Diploma ",
-            "Bachelor",
-            "Masters",
-            "PHD",
-            "Others"});
+            "001. Kuala Lumpur",
+            "002. Ipoh",
+            "003. Bestari Jaya",
+            "004. Penang"});
             this.comboBoxEducation.Location = new System.Drawing.Point(51, 169);
             this.comboBoxEducation.Name = "comboBoxEducation";
             this.comboBoxEducation.Size = new System.Drawing.Size(157, 28);
@@ -259,8 +238,9 @@ namespace IAS2163VP
             this.comboBoxGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxGender.FormattingEnabled = true;
             this.comboBoxGender.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
+            "01. Normal Savings Account",
+            "02. Premium Savings Account",
+            "03. Current  Account"});
             this.comboBoxGender.Location = new System.Drawing.Point(233, 169);
             this.comboBoxGender.Name = "comboBoxGender";
             this.comboBoxGender.Size = new System.Drawing.Size(157, 28);
@@ -288,6 +268,56 @@ namespace IAS2163VP
             this.dataGridView2.TabIndex = 11;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label1.Location = new System.Drawing.Point(-235, 97);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(59, 16);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Gender";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.comboBox1.Location = new System.Drawing.Point(-234, 115);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(157, 28);
+            this.comboBox1.TabIndex = 10;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label3.Location = new System.Drawing.Point(597, 93);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(59, 16);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Gender";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.comboBox2.Location = new System.Drawing.Point(598, 112);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(157, 28);
+            this.comboBox2.TabIndex = 10;
+            // 
             // New_Account_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -298,22 +328,24 @@ namespace IAS2163VP
             this.ClientSize = new System.Drawing.Size(800, 559);
             this.Controls.Add(this.lblTitleNewAccForm);
             this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBoxGender);
             this.Controls.Add(this.comboBoxEducation);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.textBoxIncome);
-            this.Controls.Add(this.textBoxOcupation);
             this.Controls.Add(this.lblIncome);
             this.Controls.Add(this.textBoxAddress);
             this.Controls.Add(this.textBoxPhone);
-            this.Controls.Add(this.lblOcupation);
-            this.Controls.Add(this.labelGender);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.labelAccType);
             this.Controls.Add(this.lblAddress);
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.lblPhone);
-            this.Controls.Add(this.lblEducation);
+            this.Controls.Add(this.lblBranch);
             this.Controls.Add(this.lblName);
             this.MaximizeBox = false;
             this.Name = "New_Account_Form";
@@ -328,22 +360,24 @@ namespace IAS2163VP
         #endregion
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.TextBox textBoxName;
-        private System.Windows.Forms.Label lblEducation;
+        private System.Windows.Forms.Label lblBranch;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblPhone;
-        private System.Windows.Forms.Label labelGender;
+        private System.Windows.Forms.Label labelAccType;
         private System.Windows.Forms.TextBox textBoxPhone;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Label lblAddress;
         private System.Windows.Forms.TextBox textBoxAddress;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Label lblOcupation;
         private System.Windows.Forms.Label lblIncome;
-        private System.Windows.Forms.TextBox textBoxOcupation;
         private System.Windows.Forms.TextBox textBoxIncome;
         private System.Windows.Forms.ComboBox comboBoxEducation;
         private System.Windows.Forms.ComboBox comboBoxGender;
         private System.Windows.Forms.Label lblTitleNewAccForm;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }

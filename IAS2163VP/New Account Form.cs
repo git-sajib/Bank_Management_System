@@ -204,6 +204,11 @@ namespace IAS2163VP
                 }
             }
         }
+
+        private void textBoxOcupation_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     }
 

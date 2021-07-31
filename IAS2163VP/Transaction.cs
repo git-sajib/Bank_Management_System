@@ -152,5 +152,10 @@ namespace IAS2163VP
                 }
             }
         }
+
+        private void lblStaffName_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
