@@ -16,7 +16,7 @@ namespace IAS2163VP
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Transaction());
+            Application.Run(new MainPage());
         }
     }
 }
