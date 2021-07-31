@@ -43,14 +43,14 @@ namespace IAS2163VP
             this.btnCancel = new System.Windows.Forms.Button();
             this.lblIncome = new System.Windows.Forms.Label();
             this.textBoxIncome = new System.Windows.Forms.TextBox();
-            this.comboBoxEducation = new System.Windows.Forms.ComboBox();
-            this.comboBoxGender = new System.Windows.Forms.ComboBox();
+            this.comboBoxBranch = new System.Windows.Forms.ComboBox();
+            this.comboBoxAccType = new System.Windows.Forms.ComboBox();
             this.lblTitleNewAccForm = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBoxGender = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -217,34 +217,34 @@ namespace IAS2163VP
             this.textBoxIncome.Size = new System.Drawing.Size(155, 26);
             this.textBoxIncome.TabIndex = 7;
             // 
-            // comboBoxEducation
+            // comboBoxBranch
             // 
-            this.comboBoxEducation.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.comboBoxEducation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxEducation.FormattingEnabled = true;
-            this.comboBoxEducation.Items.AddRange(new object[] {
+            this.comboBoxBranch.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBoxBranch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxBranch.FormattingEnabled = true;
+            this.comboBoxBranch.Items.AddRange(new object[] {
             "001. Kuala Lumpur",
             "002. Ipoh",
             "003. Bestari Jaya",
             "004. Penang"});
-            this.comboBoxEducation.Location = new System.Drawing.Point(51, 169);
-            this.comboBoxEducation.Name = "comboBoxEducation";
-            this.comboBoxEducation.Size = new System.Drawing.Size(157, 28);
-            this.comboBoxEducation.TabIndex = 10;
+            this.comboBoxBranch.Location = new System.Drawing.Point(51, 169);
+            this.comboBoxBranch.Name = "comboBoxBranch";
+            this.comboBoxBranch.Size = new System.Drawing.Size(157, 28);
+            this.comboBoxBranch.TabIndex = 10;
             // 
-            // comboBoxGender
+            // comboBoxAccType
             // 
-            this.comboBoxGender.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.comboBoxGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxGender.FormattingEnabled = true;
-            this.comboBoxGender.Items.AddRange(new object[] {
+            this.comboBoxAccType.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBoxAccType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxAccType.FormattingEnabled = true;
+            this.comboBoxAccType.Items.AddRange(new object[] {
             "01. Normal Savings Account",
             "02. Premium Savings Account",
             "03. Current  Account"});
-            this.comboBoxGender.Location = new System.Drawing.Point(233, 169);
-            this.comboBoxGender.Name = "comboBoxGender";
-            this.comboBoxGender.Size = new System.Drawing.Size(157, 28);
-            this.comboBoxGender.TabIndex = 10;
+            this.comboBoxAccType.Location = new System.Drawing.Point(233, 169);
+            this.comboBoxAccType.Name = "comboBoxAccType";
+            this.comboBoxAccType.Size = new System.Drawing.Size(157, 28);
+            this.comboBoxAccType.TabIndex = 10;
             // 
             // lblTitleNewAccForm
             // 
@@ -305,18 +305,18 @@ namespace IAS2163VP
             this.label3.TabIndex = 5;
             this.label3.Text = "Gender";
             // 
-            // comboBox2
+            // comboBoxGender
             // 
-            this.comboBox2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.comboBoxGender.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBoxGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxGender.FormattingEnabled = true;
+            this.comboBoxGender.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.comboBox2.Location = new System.Drawing.Point(598, 112);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(157, 28);
-            this.comboBox2.TabIndex = 10;
+            this.comboBoxGender.Location = new System.Drawing.Point(598, 112);
+            this.comboBoxGender.Name = "comboBoxGender";
+            this.comboBoxGender.Size = new System.Drawing.Size(157, 28);
+            this.comboBoxGender.TabIndex = 10;
             // 
             // New_Account_Form
             // 
@@ -329,9 +329,9 @@ namespace IAS2163VP
             this.Controls.Add(this.lblTitleNewAccForm);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBoxGender);
-            this.Controls.Add(this.comboBoxEducation);
+            this.Controls.Add(this.comboBoxAccType);
+            this.Controls.Add(this.comboBoxBranch);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnSubmit);
@@ -371,13 +371,13 @@ namespace IAS2163VP
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label lblIncome;
         private System.Windows.Forms.TextBox textBoxIncome;
-        private System.Windows.Forms.ComboBox comboBoxEducation;
-        private System.Windows.Forms.ComboBox comboBoxGender;
+        private System.Windows.Forms.ComboBox comboBoxBranch;
+        private System.Windows.Forms.ComboBox comboBoxAccType;
         private System.Windows.Forms.Label lblTitleNewAccForm;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBoxGender;
     }
 }

@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace IAS2163VP.models
 {
-    class Staff
+    public class Staff
     {
+        public int Id { get; set; }
+        public String Name { get; set; }
+        public int Role { get; set; }
+        public String Phone { get; set; }
+        public String Address { get; set; }
     }
 }

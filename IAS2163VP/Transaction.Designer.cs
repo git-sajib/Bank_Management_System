@@ -56,11 +56,11 @@ namespace IAS2163VP
             this.lblTitleTransaction = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblStaffName = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.lblStaffId = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblStaffRole = new System.Windows.Forms.Label();
+            this.lblStaffName = new System.Windows.Forms.Label();
+            this.CheckStaff = new System.Windows.Forms.Button();
+            this.lblStaffId = new System.Windows.Forms.Label();
+            this.TxtStaffId = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -374,9 +374,9 @@ namespace IAS2163VP
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.lblStaffRole);
             this.panel4.Controls.Add(this.lblStaffName);
-            this.panel4.Controls.Add(this.button2);
+            this.panel4.Controls.Add(this.CheckStaff);
             this.panel4.Controls.Add(this.lblStaffId);
-            this.panel4.Controls.Add(this.textBox1);
+            this.panel4.Controls.Add(this.TxtStaffId);
             this.panel4.Location = new System.Drawing.Point(113, 89);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(663, 100);
@@ -394,6 +394,19 @@ namespace IAS2163VP
             this.label2.TabIndex = 28;
             this.label2.Text = "Check";
             // 
+            // lblStaffRole
+            // 
+            this.lblStaffRole.AutoSize = true;
+            this.lblStaffRole.BackColor = System.Drawing.Color.Transparent;
+            this.lblStaffRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStaffRole.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblStaffRole.Location = new System.Drawing.Point(513, 52);
+            this.lblStaffRole.Name = "lblStaffRole";
+            this.lblStaffRole.Size = new System.Drawing.Size(46, 20);
+            this.lblStaffRole.TabIndex = 25;
+            this.lblStaffRole.Text = "Role";
+            this.lblStaffRole.Click += new System.EventHandler(this.lblStaffName_Click);
+            // 
             // lblStaffName
             // 
             this.lblStaffName.AutoSize = true;
@@ -407,23 +420,23 @@ namespace IAS2163VP
             this.lblStaffName.Text = "Name";
             this.lblStaffName.Click += new System.EventHandler(this.lblStaffName_Click);
             // 
-            // button2
+            // CheckStaff
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button2.FlatAppearance.BorderSize = 5;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Cyan;
-            this.button2.Font = new System.Drawing.Font("Microsoft PhagsPa", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.Control;
-            this.button2.Location = new System.Drawing.Point(268, 43);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(96, 31);
-            this.button2.TabIndex = 24;
-            this.button2.Text = "Check";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.btnCheckBal_Click);
+            this.CheckStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.CheckStaff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.CheckStaff.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.CheckStaff.FlatAppearance.BorderSize = 5;
+            this.CheckStaff.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.CheckStaff.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Cyan;
+            this.CheckStaff.Font = new System.Drawing.Font("Microsoft PhagsPa", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckStaff.ForeColor = System.Drawing.SystemColors.Control;
+            this.CheckStaff.Location = new System.Drawing.Point(268, 43);
+            this.CheckStaff.Name = "CheckStaff";
+            this.CheckStaff.Size = new System.Drawing.Size(96, 31);
+            this.CheckStaff.TabIndex = 24;
+            this.CheckStaff.Text = "Check";
+            this.CheckStaff.UseVisualStyleBackColor = false;
+            this.CheckStaff.Click += new System.EventHandler(this.CheckStaff_Click);
             // 
             // lblStaffId
             // 
@@ -437,27 +450,14 @@ namespace IAS2163VP
             this.lblStaffId.TabIndex = 14;
             this.lblStaffId.Text = "Staff ID";
             // 
-            // textBox1
+            // TxtStaffId
             // 
-            this.textBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(43, 46);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(197, 26);
-            this.textBox1.TabIndex = 19;
-            // 
-            // lblStaffRole
-            // 
-            this.lblStaffRole.AutoSize = true;
-            this.lblStaffRole.BackColor = System.Drawing.Color.Transparent;
-            this.lblStaffRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStaffRole.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblStaffRole.Location = new System.Drawing.Point(513, 52);
-            this.lblStaffRole.Name = "lblStaffRole";
-            this.lblStaffRole.Size = new System.Drawing.Size(46, 20);
-            this.lblStaffRole.TabIndex = 25;
-            this.lblStaffRole.Text = "Role";
-            this.lblStaffRole.Click += new System.EventHandler(this.lblStaffName_Click);
+            this.TxtStaffId.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.TxtStaffId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtStaffId.Location = new System.Drawing.Point(43, 46);
+            this.TxtStaffId.Name = "TxtStaffId";
+            this.TxtStaffId.Size = new System.Drawing.Size(197, 26);
+            this.TxtStaffId.TabIndex = 19;
             // 
             // Transaction
             // 
@@ -515,9 +515,9 @@ namespace IAS2163VP
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblStaffName;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button CheckStaff;
         private System.Windows.Forms.Label lblStaffId;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxtStaffId;
         private System.Windows.Forms.Label lblStaffRole;
     }
 }
